@@ -1,0 +1,32 @@
+/* *{
+    margin: 0%;
+} */
+
+html {
+    font-family: 'canva sans', arial, monospace;
+}
+
+nav {
+    background-color: #f0f0f0;
+    height: 3rem;
+}
+
+.nav {
+    font-size: 1em;
+    margin: 1rem;
+    position: relative;
+}
+
+.anchor {
+    float: right;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* margin: 0 auto; */
+}
+
+
+

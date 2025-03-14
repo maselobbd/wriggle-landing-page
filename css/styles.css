@@ -1,32 +1,113 @@
-/* *{
+*{
     margin: 0%;
-} */
+}
 
 html {
     font-family: 'canva sans', arial, monospace;
 }
 
-nav {
+header nav {
     background-color: #f0f0f0;
     height: 3rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 .nav {
-    font-size: 1em;
+    font-size: 14pt;
     margin: 1rem;
-    position: relative;
 }
 
-.anchor {
-    float: right;
+a {
+    color: black;
+    text-decoration: none;
 }
+
+
+footer nav {
+    background-color: #f0f0f0;
+    height: 3rem;
+    display: flex;
+    justify-content: end;
+}
+
 
 main{
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
-    /* margin: 0 auto; */
+}
+
+.right{
+    margin-left: 20rem;
+}
+
+h1 {
+    font-size: 60pt;
+    margin: 8rem auto 0rem;
+    font-stretch: expanded;
+}
+
+strong {
+    color: #d0483a;
+    /* background-color: -webkit-linear-gradient(left, red, blue -webkit-calc(var(--cwidth)), orange -webkit-calc(var(--cwidth) * 2), green -webkit-calc(var(--cwidth) * 3), rgb(0,255,255));  */
+}
+
+section {
+    margin: 4rem auto;
+}
+
+section.opening {
+    font-size: 20pt;
+    margin: 4rem auto;
+    text-align: center;
+}
+
+section.main.anchors {
+    display: flex;
+    margin: 4rem auto;
+    justify-content: space-evenly;
+}
+
+.anchor-border {
+    font-size: 18pt;
+    border-style: solid;
+    border-color: #f0f0f0;
+    border-radius: 25%;
+    padding: 3% 6%;
+
+    background-color: #f0f0f0;
+    box-shadow: 0.5px 2px 4px 2px #a7a6a6b4;
 }
 
 
+section.teams {
+    background-color: #f1f0f0;
+    margin: 0rem 0rem 4rem 0rem;
+    font-size: 25pt;
+    text-align: left;
 
+    box-shadow: 0px 2px 8px 4px #ddddddb4;
+}
+
+
+section.boards {
+    margin: 0rem 0rem 4rem 2rem;
+    font-size: 25pt;
+    text-align: right;
+}
+
+
+section.tasks {
+    background-color: #f0f0f0;
+    margin: 0rem 0rem 4rem 0rem;
+    font-size: 25pt;
+    text-align: left;
+    box-shadow: 0px 2px 8px 4px #ddddddb4;
+}
+
+
+section.dashboard {
+    font-size: 25pt;
+    margin: 0rem 0rem 4rem 2rem;
+    text-align: right;
+}

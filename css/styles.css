@@ -6,6 +6,12 @@ html {
     font-family: 'canva sans', arial, monospace;
 }
 
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 header nav {
     background-color: #f0f0f0;
     height: 3rem;
@@ -31,6 +37,9 @@ footer nav {
     justify-content: end;
 }
 
+footer {
+    margin-top: auto;
+}
 
 main{
     display: flex;

@@ -21,12 +21,17 @@ header nav {
 
 .nav {
     font-size: 14pt;
-    margin: 1rem;
+    margin: 0.8rem 1rem;
 }
 
 a {
     color: black;
     text-decoration: none;
+    text-shadow: 0.1px 0.1px 0.5px #464646;
+}
+
+a:hover {
+    transform: scale(1.1, 1.1);
 }
 
 
@@ -51,25 +56,65 @@ main{
 }
 
 h1 {
+    color: #333333;
     font-size: 60pt;
-    margin: 8rem auto 0rem;
-    font-stretch: expanded;
+    margin: 11rem auto 0rem;
+    text-shadow: 0.5px 0.5px 2px #464646;
 }
 
-strong {
-    color: #d0483a;
-    /* background-color: -webkit-linear-gradient(left, red, blue -webkit-calc(var(--cwidth)), orange -webkit-calc(var(--cwidth) * 2), green -webkit-calc(var(--cwidth) * 3), rgb(0,255,255));  */
+strong::before {
+    content: "wriggle";
+    color: #d27938;
+    animation: changeWord infinite 8s;
+    animation-delay: 2s;
 }
 
-section {
-    margin: 4rem auto;
+@keyframes changeWord {
+    0% {
+        content: "The adaptable way of working";
+        color: #333333;
+    }
+    10% {
+        color: #f0f0f0;
+    }
+    20% {
+        content: "The efficient way of working";
+        color: #387595;
+    }
+    30% {
+        content: "The reactive way of working";
+        color: #6c6b6b;
+    }
+    40% {
+        content: "The effective way of working";
+        color: #d0483a;
+    }
+    60% {
+        content: "The easy way of working";
+    }
+    70% {
+        content: "The better way of working";
+        color: #387595;
+    }
+    80% {
+        content: "The wriggle way of working";
+        color: #d0483a;
+    }
+    100% {
+        color: #d27938;
+        transform: scale(2, 2);
+    }
 }
+
 
 section.opening {
-    font-size: 20pt;
-    margin: 4rem auto;
+    font-size: 18pt;
+    margin: 5rem auto -2rem;
     text-align: center;
+    height: 50vh;
+    
 }
+
 
 section.main.anchors {
     display: flex;
@@ -78,7 +123,7 @@ section.main.anchors {
 }
 
 .anchor-border {
-    font-size: 18pt;
+    font-size: 15pt;
     border-style: solid;
     border-color: #f0f0f0;
     border-radius: 25%;
@@ -88,35 +133,259 @@ section.main.anchors {
     box-shadow: 0.5px 2px 4px 2px #a7a6a6b4;
 }
 
+.anchor-border:hover {
+    background-color: #e2e2e2;
+    border-color: #e2e2e2;
+    transform: scale(1.1, 1.1);
+}
+
+section h2 {
+    color: #333333;
+    text-shadow: 0.5px 0.5px 1px #464646;
+    min-width: 40rem;
+    overflow-wrap: break-word;
+    margin: 0 2rem;
+}
+
+section.about {
+    font-size: 18pt;
+    margin: 1rem auto -5rem;
+    text-align: center;
+    height: 50vh;
+    width: 60vw;
+}
+
+section.main.features {
+    display: flex;
+}
+
+section.main.features.right {
+    flex-direction: row-reverse;
+}
+
+p.description.right {
+    margin: 3rem 3rem 0 12rem;
+}
+
+p.description.left {
+    margin: 3rem 12rem 0 3rem;
+}
 
 section.teams {
-    background-color: #f1f0f0;
-    margin: 0rem 0rem 4rem 0rem;
-    font-size: 25pt;
+    background-color: #f6f6f6b4;
+    margin: 0rem;
+    height: 50vh;
+    font-size: 20pt;
     text-align: left;
 
-    box-shadow: 0px 2px 8px 4px #ddddddb4;
+    border-style: solid;
+    border-color: #f6f6f6b4;
+    padding: 2%;
+    box-shadow: 0px 2px 4px 4px #eaeaeab4;
 }
 
 
 section.boards {
-    margin: 0rem 0rem 4rem 2rem;
-    font-size: 25pt;
+    background-color: #ffffff;
+    margin: 2rem 0rem;
+    height: 50vh;
+    font-size: 20pt;
     text-align: right;
+
+    padding: 2%;
+    border-style: solid;
+    border-color: #ffffff;
+    box-shadow: 0px 2px 4px 4px #ecececb4;
 }
 
 
 section.tasks {
-    background-color: #f0f0f0;
-    margin: 0rem 0rem 4rem 0rem;
-    font-size: 25pt;
+    font-size: 20pt;
     text-align: left;
-    box-shadow: 0px 2px 8px 4px #ddddddb4;
+    background-color: #f6f6f6b4;
+    
+    height: 50vh;
+    margin: 0rem;
+    border-style: solid;
+    border-color: #f6f6f6b4;
+    padding: 2%;
+    box-shadow: 1px 2px 4px 4px #eaeaeab4;
 }
 
 
 section.dashboard {
-    font-size: 25pt;
-    margin: 0rem 0rem 4rem 2rem;
+    font-size: 20pt;
+    margin: 2rem 0rem;
+    height: 50vh;
+    padding: 2%;
     text-align: right;
+
+    padding: 2%;
+    border-style: solid;
+    border-color: #ffffff;
+    box-shadow: 0px 2px 4px 4px #ecececb4;
+}
+
+
+@media screen and (min-width: 22rem) and (max-width: 48rem) {
+    body {
+        width: 100%;
+    }
+    header nav {
+        height: 2.5rem;
+    }
+
+    .nav {
+        font-size: 10pt;
+        margin: 0.8rem 0.5rem;
+    }
+
+    .nav.image {
+        width: 1rem;
+        height: 1rem;
+    }
+    
+    footer nav {
+        height: 2rem;
+    }
+
+    h1 {
+        font-size: 20pt;
+        margin: 3rem auto 0rem;
+    }
+
+    strong::before {
+        content: "wriggle";
+        color: #333333;
+        animation: changeWord infinite 10s;
+    }
+    
+    @keyframes changeWord {
+        0% {
+            content: "efficient";
+            color: #333333;
+        }
+        20% {
+            content: "reactive";
+            color: #387595;
+        }
+        30% {
+            color: #6c6b6b;
+        }
+        40% {
+            content: "effective";
+            color: #d0483a;
+        }
+        60% {
+            content: "easy";
+        }
+        70% {
+            content: "better";
+            color: #387595;
+        }
+        80% {
+            content: "wriggle";
+            color: #d0483a;
+        }
+        100% {
+            color: #d27938;
+            transform: scale(2, 2);
+        }
+    }
+    
+
+    section.opening {
+        font-size: 12pt;
+        margin: 3rem auto -5rem;        
+    }
+    
+    
+    section.main.anchors {
+        display: flex;
+        flex-direction: column;
+        margin: 2rem auto 0rem;
+        justify-content: space-between;
+        height: 8vh;
+    }
+    
+    .anchor-border {
+        font-size: 9pt;
+        border-style: solid;
+        border-radius: 20%;
+        padding: 1% 1%;
+    }
+    
+    
+    section h2 {
+        min-width: 20rem;
+        font-size: 18pt;
+    }
+    
+    section.about h2 {
+        margin-left: -3rem;
+        margin-bottom: 1rem;
+    }
+
+    section.about {
+        font-size: 10pt;
+        margin: -6rem auto -5rem;
+    }
+    
+    section.main.features {
+        flex-direction: column;
+        min-width: 40rem;
+    }
+    
+    section.main.features.right {
+        flex-direction: column;
+    }
+
+    h3 {
+        color: #333333;
+        font-size: 18pt;
+        margin-bottom: 0.5rem;
+
+        text-shadow: 0.2px 0.2px 1px #464646;
+    }
+
+    
+    p.description.right {
+        margin: 1rem 0 1rem -60rem;
+        font-size: 10pt;
+    }
+    
+    p.description.left {
+        margin: 1rem 20rem 1rem 0;
+        font-size: 10pt;
+    }
+    
+    img.features {
+        width: 10rem;
+        height: 10rem;
+        margin-left: 5rem;
+    }
+
+    section.teams {
+        margin: 1rem;
+        text-align: center;
+    }
+    
+    
+    section.boards {
+        margin: 1rem;
+        text-align: center;
+        
+    }
+    
+    
+    section.tasks {
+        margin: 1rem;
+        text-align: center;
+    }
+    
+    
+    section.dashboard {
+        margin: 1rem;
+        text-align: center;
+    }
 }

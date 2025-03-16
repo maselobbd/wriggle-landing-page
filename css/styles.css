@@ -63,7 +63,7 @@ h1 {
 }
 
 strong::before {
-    content: "wriggle";
+    content: "The wriggle way of working";
     color: #d27938;
     animation: changeWord infinite 8s;
     animation-delay: 2s;
@@ -141,10 +141,11 @@ section.main.anchors {
 
 section h2 {
     color: #333333;
+    font-size: 30pt;
     text-shadow: 0.5px 0.5px 1px #464646;
     min-width: 40rem;
     overflow-wrap: break-word;
-    margin: 0 2rem;
+    margin-bottom: 1rem;
 }
 
 section.about {
@@ -153,6 +154,14 @@ section.about {
     text-align: center;
     height: 50vh;
     width: 60vw;
+}
+
+h3 {
+    color: #333333;
+    font-size: 25pt;
+    margin: 0 2rem 2rem 2rem;
+
+    text-shadow: 0.2px 0.2px 1px #464646;
 }
 
 section.main.features {
@@ -164,18 +173,19 @@ section.main.features.right {
 }
 
 p.description.right {
-    margin: 3rem 3rem 0 12rem;
+    margin: 3rem 5rem 0 12rem;
+    min-width: 40rem;
 }
 
 p.description.left {
-    margin: 3rem 12rem 0 3rem;
+    margin: 3rem 12rem 0 5rem;
 }
 
 section.teams {
     background-color: #f6f6f6b4;
     margin: 0rem;
     height: 50vh;
-    font-size: 20pt;
+    font-size: 15pt;
     text-align: left;
 
     border-style: solid;
@@ -189,7 +199,7 @@ section.boards {
     background-color: #ffffff;
     margin: 2rem 0rem;
     height: 50vh;
-    font-size: 20pt;
+    font-size: 15pt;
     text-align: right;
 
     padding: 2%;
@@ -200,7 +210,7 @@ section.boards {
 
 
 section.tasks {
-    font-size: 20pt;
+    font-size: 15pt;
     text-align: left;
     background-color: #f6f6f6b4;
     
@@ -214,7 +224,7 @@ section.tasks {
 
 
 section.dashboard {
-    font-size: 20pt;
+    font-size: 15pt;
     margin: 2rem 0rem;
     height: 50vh;
     padding: 2%;
@@ -227,7 +237,7 @@ section.dashboard {
 }
 
 
-@media screen and (min-width: 22rem) and (max-width: 48rem) {
+@media screen and (min-width: 360px) and (max-width: 600px) {
     body {
         width: 100%;
     }
@@ -250,8 +260,8 @@ section.dashboard {
     }
 
     h1 {
-        font-size: 20pt;
-        margin: 3rem auto 0rem;
+        font-size: 40pt;
+        margin: 10rem auto 6rem;
     }
 
     strong::before {
@@ -296,7 +306,7 @@ section.dashboard {
 
     section.opening {
         font-size: 12pt;
-        margin: 3rem auto -5rem;        
+        margin: 3rem auto -2rem;        
     }
     
     
@@ -305,14 +315,14 @@ section.dashboard {
         flex-direction: column;
         margin: 2rem auto 0rem;
         justify-content: space-between;
-        height: 8vh;
+        height: 10vh;
     }
     
     .anchor-border {
-        font-size: 9pt;
+        font-size: 10pt;
         border-style: solid;
         border-radius: 20%;
-        padding: 1% 1%;
+        padding: 0.6% 0.6%;
     }
     
     
@@ -328,7 +338,7 @@ section.dashboard {
 
     section.about {
         font-size: 10pt;
-        margin: -6rem auto -5rem;
+        margin: -6rem auto -7rem;
     }
     
     section.main.features {
@@ -342,15 +352,16 @@ section.dashboard {
 
     h3 {
         color: #333333;
-        font-size: 18pt;
-        margin-bottom: 0.5rem;
+        font-size: 16pt;
+        margin-bottom: 0.2rem;
 
         text-shadow: 0.2px 0.2px 1px #464646;
     }
 
-    
     p.description.right {
-        margin: 1rem 0 1rem -60rem;
+        margin: 1rem 0 1rem -27rem;
+        inline-size: 19rem;
+        text-align: center;
         font-size: 10pt;
     }
     
@@ -363,6 +374,10 @@ section.dashboard {
         width: 10rem;
         height: 10rem;
         margin-left: 5rem;
+    }
+
+    img.features.right {
+        margin-left: -15rem;
     }
 
     section.teams {
@@ -386,6 +401,122 @@ section.dashboard {
     
     section.dashboard {
         margin: 1rem;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1020px) {
+    body {
+        width: 100%;
+    }
+    header nav {
+        height: 3rem;
+    }
+
+    .nav {
+        font-size: 12pt;
+        margin: 0.8rem 0.5rem;
+    }
+
+    .nav.image {
+        width: 2rem;
+        height: 1.5rem;
+    }
+    
+    footer nav {
+        height: 3rem;
+    }
+
+    h1 {
+        font-size: 35pt;
+        margin: 10rem auto 6rem;
+    }
+
+    section.opening {
+        font-size: 14pt;
+        margin: 3rem auto 0rem;        
+    }
+    
+    
+    section.main.anchors {
+        margin: 3rem auto 0rem;
+        justify-content: space-between;
+    }
+    
+    .anchor-border {
+        font-size: 12pt;
+        border-style: solid;
+        border-radius: 20%;
+        padding: 5% 5%;
+    }
+    
+    
+    section h2 {
+        min-width: 20rem;
+        font-size: 30pt;
+    }
+    
+    section.about h2 {
+        margin-bottom: 1rem;
+    }
+
+    section.about {
+        font-size: 12pt;
+        min-width: 40rem;
+        margin: -6rem auto -10rem;
+    }
+
+    h3 {
+        color: #333333;
+        font-size: 20pt;
+        margin-bottom: 2rem;
+
+        text-shadow: 0.2px 0.2px 1px #464646;
+    }
+
+    p.description.right {
+        margin: 1rem 2rem 1rem -10rem;
+        text-align: right;
+        font-size: 12pt;
+    }
+    
+    p.description.left {
+        margin: 1rem 1rem 1rem 2rem;
+        text-align: left;
+        font-size: 12pt;
+    }
+    
+    img.features {
+        width: 8rem;
+        height: 8rem;
+        margin-left: 5rem;
+    }
+
+    img.features.right {
+        margin-left: -15rem;
+    }
+
+    section.teams {
+        height: auto;
+        text-align: center;
+    }
+    
+    
+    section.boards {
+        height: auto;
+        text-align: center;
+        
+    }
+    
+    
+    section.tasks {
+        height: auto;
+        text-align: center;
+    }
+    
+    
+    section.dashboard {
+        height: auto;
         text-align: center;
     }
 }

@@ -7,7 +7,6 @@ html {
 }
 
 body {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -42,28 +41,21 @@ footer nav {
     justify-content: end;
 }
 
-footer {
-    margin-top: auto;
-}
-
 main{
     display: flex;
     flex-direction: column;
 }
 
-.right{
-    margin-left: 20rem;
-}
-
 h1 {
     color: #333333;
     font-size: 60pt;
-    margin: 11rem auto 0rem;
+    margin: 11rem auto 8rem;
+    text-align: center;
     text-shadow: 0.5px 0.5px 2px #464646;
 }
 
 strong::before {
-    content: "The wriggle way of working";
+    content: "wriggle";
     color: #d27938;
     animation: changeWord infinite 8s;
     animation-delay: 2s;
@@ -71,33 +63,33 @@ strong::before {
 
 @keyframes changeWord {
     0% {
-        content: "The adaptable way of working";
+        content: "adaptable";
         color: #333333;
     }
     10% {
         color: #f0f0f0;
     }
     20% {
-        content: "The efficient way of working";
+        content: "efficient";
         color: #387595;
     }
     30% {
-        content: "The reactive way of working";
+        content: "reactive";
         color: #6c6b6b;
     }
     40% {
-        content: "The effective way of working";
+        content: "effective";
         color: #d0483a;
     }
     60% {
-        content: "The easy way of working";
+        content: "easy";
     }
     70% {
-        content: "The better way of working";
+        content: "better";
         color: #387595;
     }
     80% {
-        content: "The wriggle way of working";
+        content: "wriggle";
         color: #d0483a;
     }
     100% {
@@ -109,28 +101,25 @@ strong::before {
 
 section.opening {
     font-size: 18pt;
-    margin: 5rem auto -2rem;
-    text-align: center;
-    height: 50vh;
-    
+    margin: 0 auto;
 }
 
 
 section.main.anchors {
     display: flex;
-    margin: 4rem auto;
-    justify-content: space-evenly;
+    margin: 4rem auto 0rem;
+    justify-content: space-between;
 }
 
 .anchor-border {
-    font-size: 15pt;
+    font-size: 20pt;
     border-style: solid;
     border-color: #f0f0f0;
-    border-radius: 25%;
+    border-radius: 30%;
     padding: 3% 6%;
 
     background-color: #f0f0f0;
-    box-shadow: 0.5px 2px 4px 2px #a7a6a6b4;
+    box-shadow: 0.5px 2px 5px 1px #a7a6a6b4;
 }
 
 .anchor-border:hover {
@@ -143,94 +132,79 @@ section h2 {
     color: #333333;
     font-size: 30pt;
     text-shadow: 0.5px 0.5px 1px #464646;
-    min-width: 40rem;
-    overflow-wrap: break-word;
-    margin-bottom: 1rem;
+    padding: 5%;
 }
 
 section.about {
     font-size: 18pt;
-    margin: 1rem auto -5rem;
+    margin: 5rem auto;
     text-align: center;
-    height: 50vh;
     width: 60vw;
 }
 
 h3 {
     color: #333333;
     font-size: 25pt;
-    margin: 0 2rem 2rem 2rem;
+    margin: 2rem;
 
     text-shadow: 0.2px 0.2px 1px #464646;
 }
 
 section.main.features {
     display: flex;
+    justify-content: space-around;
 }
 
 section.main.features.right {
     flex-direction: row-reverse;
 }
 
-p.description.right {
-    margin: 3rem 5rem 0 12rem;
-    min-width: 40rem;
-}
-
-p.description.left {
-    margin: 3rem 12rem 0 5rem;
-}
 
 section.teams {
-    background-color: #f6f6f6b4;
-    margin: 0rem;
-    height: 50vh;
+    padding: 2%;
     font-size: 15pt;
     text-align: left;
-
+    margin-right: 5rem;
+    
     border-style: solid;
     border-color: #f6f6f6b4;
-    padding: 2%;
+    background-color: #f6f6f6b4;
     box-shadow: 0px 2px 4px 4px #eaeaeab4;
 }
 
 
 section.boards {
-    background-color: #ffffff;
-    margin: 2rem 0rem;
-    height: 50vh;
+    padding: 2%;
     font-size: 15pt;
     text-align: right;
-
-    padding: 2%;
+    margin: 2rem 0 2rem 5rem;
+    
     border-style: solid;
     border-color: #ffffff;
+    background-color: #ffffff;
     box-shadow: 0px 2px 4px 4px #ecececb4;
 }
 
 
 section.tasks {
+    padding: 2%;
     font-size: 15pt;
     text-align: left;
-    background-color: #f6f6f6b4;
+    margin-right: 5rem;
     
-    height: 50vh;
-    margin: 0rem;
     border-style: solid;
     border-color: #f6f6f6b4;
-    padding: 2%;
+    background-color: #f6f6f6b4;
     box-shadow: 1px 2px 4px 4px #eaeaeab4;
 }
 
 
 section.dashboard {
+    padding: 2%;
     font-size: 15pt;
-    margin: 2rem 0rem;
-    height: 50vh;
-    padding: 2%;
     text-align: right;
+    margin: 2rem 0 2rem 5rem;
 
-    padding: 2%;
     border-style: solid;
     border-color: #ffffff;
     box-shadow: 0px 2px 4px 4px #ecececb4;
@@ -238,9 +212,6 @@ section.dashboard {
 
 
 @media screen and (min-width: 360px) and (max-width: 600px) {
-    body {
-        width: 100%;
-    }
     header nav {
         height: 2.5rem;
     }
@@ -251,8 +222,8 @@ section.dashboard {
     }
 
     .nav.image {
-        width: 1rem;
-        height: 1rem;
+        width: 1.5rem;
+        height: 1.2rem;
     }
     
     footer nav {
@@ -260,85 +231,40 @@ section.dashboard {
     }
 
     h1 {
-        font-size: 40pt;
-        margin: 10rem auto 6rem;
-    }
-
-    strong::before {
-        content: "wriggle";
-        color: #333333;
-        animation: changeWord infinite 10s;
-    }
-    
-    @keyframes changeWord {
-        0% {
-            content: "efficient";
-            color: #333333;
-        }
-        20% {
-            content: "reactive";
-            color: #387595;
-        }
-        30% {
-            color: #6c6b6b;
-        }
-        40% {
-            content: "effective";
-            color: #d0483a;
-        }
-        60% {
-            content: "easy";
-        }
-        70% {
-            content: "better";
-            color: #387595;
-        }
-        80% {
-            content: "wriggle";
-            color: #d0483a;
-        }
-        100% {
-            color: #d27938;
-            transform: scale(2, 2);
-        }
+        font-size: 30pt;
     }
     
 
     section.opening {
         font-size: 12pt;
-        margin: 3rem auto -2rem;        
+        margin: 3rem auto;      
     }
     
     
     section.main.anchors {
         display: flex;
         flex-direction: column;
-        margin: 2rem auto 0rem;
-        justify-content: space-between;
+        margin: 2rem auto;
         height: 10vh;
     }
     
     .anchor-border {
         font-size: 10pt;
+        text-align: center;
         border-style: solid;
-        border-radius: 20%;
-        padding: 0.6% 0.6%;
+        border-radius: 10%;
+        padding: 0.6%;
     }
     
     
     section h2 {
-        min-width: 20rem;
         font-size: 18pt;
     }
     
-    section.about h2 {
-        margin-left: -3rem;
-        margin-bottom: 1rem;
-    }
 
     section.about {
-        font-size: 10pt;
-        margin: -6rem auto -7rem;
+        font-size: 11pt;
+        margin: 1rem auto;
     }
     
     section.main.features {
@@ -351,33 +277,31 @@ section.dashboard {
     }
 
     h3 {
-        color: #333333;
         font-size: 16pt;
+        margin-top: 1rem;
         margin-bottom: 0.2rem;
-
-        text-shadow: 0.2px 0.2px 1px #464646;
     }
 
     p.description.right {
-        margin: 1rem 0 1rem -27rem;
+        margin: 1rem 0 1rem 3rem;
         inline-size: 19rem;
-        text-align: center;
         font-size: 10pt;
     }
     
     p.description.left {
-        margin: 1rem 20rem 1rem 0;
+        margin: 1rem 13rem 1rem 0;
         font-size: 10pt;
     }
     
     img.features {
         width: 10rem;
         height: 10rem;
-        margin-left: 5rem;
+        margin-left: 8rem;
     }
 
     img.features.right {
-        margin-left: -15rem;
+        margin-top: 1rem;
+        margin-left: 8rem;
     }
 
     section.teams {
@@ -406,9 +330,7 @@ section.dashboard {
 }
 
 @media screen and (min-width: 601px) and (max-width: 1020px) {
-    body {
-        width: 100%;
-    }
+
     header nav {
         height: 3rem;
     }
@@ -428,23 +350,24 @@ section.dashboard {
     }
 
     h1 {
-        font-size: 35pt;
-        margin: 10rem auto 6rem;
+        font-size: 50pt;
+        margin: 12rem auto 8rem;
+        
     }
 
     section.opening {
-        font-size: 14pt;
-        margin: 3rem auto 0rem;        
+        font-size: 15pt;
+        margin: 0 auto;  
     }
     
     
     section.main.anchors {
-        margin: 3rem auto 0rem;
+        margin: 3rem auto;
         justify-content: space-between;
     }
     
     .anchor-border {
-        font-size: 12pt;
+        font-size: 15pt;
         border-style: solid;
         border-radius: 20%;
         padding: 5% 5%;
@@ -452,71 +375,62 @@ section.dashboard {
     
     
     section h2 {
-        min-width: 20rem;
         font-size: 30pt;
     }
     
-    section.about h2 {
-        margin-bottom: 1rem;
-    }
 
     section.about {
-        font-size: 12pt;
-        min-width: 40rem;
-        margin: -6rem auto -10rem;
+        font-size: 13pt;
+        margin: 2rem auto;
     }
 
     h3 {
         color: #333333;
-        font-size: 20pt;
+        font-size: 22pt;
         margin-bottom: 2rem;
 
         text-shadow: 0.2px 0.2px 1px #464646;
     }
 
-    p.description.right {
-        margin: 1rem 2rem 1rem -10rem;
-        text-align: right;
-        font-size: 12pt;
-    }
-    
     p.description.left {
-        margin: 1rem 1rem 1rem 2rem;
+        margin: 1rem;
         text-align: left;
-        font-size: 12pt;
+        font-size: 13pt;
+    }
+
+    p.description.right {
+        margin: 1rem;
+        text-align: right;
+        font-size: 13pt;
     }
     
     img.features {
-        width: 8rem;
-        height: 8rem;
-        margin-left: 5rem;
+        width: 10rem;
     }
 
-    img.features.right {
-        margin-left: -15rem;
-    }
 
     section.teams {
-        height: auto;
         text-align: center;
+        margin: 1rem ;
     }
     
     
     section.boards {
-        height: auto;
         text-align: center;
+        margin: 1rem;
         
     }
     
     
     section.tasks {
-        height: auto;
         text-align: center;
+        margin: 1rem;
     }
     
     
     section.dashboard {
-        height: auto;
         text-align: center;
+        margin: 1rem;
     }
+
 }

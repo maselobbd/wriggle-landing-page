@@ -6,6 +6,7 @@
     --primary-background-colour: #fbfbfb;
     --secondary-background-colour: #f6f6f6b4;
     --tertiary-background-colour: #f0f0f0;
+    --font-colour: #1c1c1c;
 }
 
 html {
@@ -20,9 +21,24 @@ body {
 
 header nav {
     background-color: var(--tertiary-background-colour);
+    box-shadow: 0px 0px 3px 0.1px #6c6b6b;
     height: 3rem;
     display: flex;
     justify-content: space-between;
+}
+
+
+.header.anchor {
+    color: var(--font-colour);
+    font-weight: bold;
+}
+
+.header.anchor:hover {
+    text-shadow: none;
+
+    border-style: solid;
+    border-color: #d27938;
+    padding: 0.5rem;
 }
 
 .nav {
@@ -33,7 +49,6 @@ header nav {
 a {
     color: black;
     text-decoration: none;
-    text-shadow: 0.1px 0.1px 0.1px #464646;
 }
 
 a:hover {
@@ -55,9 +70,9 @@ main{
 }
 
 h1 {
-    color: #333333;
+    color: var(--font-colour);
     font-size: 58pt;
-    margin: 11rem auto 8rem;
+    margin: 12rem auto 10rem;
     text-align: center;
     text-shadow: 1px 1px 2px #464646;
 }
@@ -65,13 +80,13 @@ h1 {
 strong::before {
     content: "wriggle";
     color: #d27938;
-    animation: changeWord infinite 8s;
+    animation: changeWord 8s;
 }
 
 @keyframes changeWord {
     0% {
         content: "adaptable";
-        color: #333333;
+        color: var(--font-colour);
     }
     10% {
         color: var(--tertiary-background-colour);
@@ -108,6 +123,7 @@ strong::before {
 
 section.opening {
     font-size: 17pt;
+    font-weight: bold;
     margin: 0 auto;
     text-shadow: 0.1px 0.1px 0.1px #2c2c2c;
 }
@@ -121,13 +137,13 @@ section.main.anchors {
 
 .anchor-border {
     font-size: 15pt;
+    
+    padding: 2% 5%;
     border-style: solid;
-    border-color: var(--tertiary-background-colour);
     border-radius: 10%;
-    padding: 3% 6%;
-
+    border-color: var(--tertiary-background-colour);
     background-color: var(--tertiary-background-colour);
-    box-shadow: 0px 1px 5px 1px #a7a6a6b4;
+    box-shadow: 0px 0px 3px 0.1px #6c6b6ba8;
 }
 
 .anchor-border:hover {
@@ -137,66 +153,122 @@ section.main.anchors {
 }
 
 section h2 {
-    color: #333333;
+    color: var(--font-colour);
     font-size: 25pt;
     text-shadow: 0.5px 0.5px 1px #464646;
-    padding: 5%;
+    padding: 2%;
 }
 
 section.about {
-    font-size: 15pt;
-    margin: 5rem auto;
+    font-size: 13pt;
     text-align: center;
-    width: 60vw;
+    
+    width: 100vw;
+    height: 30vh;
+    margin: 3rem auto;
+    box-shadow: 1px 1px 5px 1px var(--secondary-background-colour);
+    background-color: var(--secondary-background-colour);
+}
+
+section.about p {
+    width: 50vw;
+    margin: 0 auto;
 }
 
 h3 {
-    color: #333333;
+    color: var(--font-colour);
     font-size: 22pt;
-    margin: 2rem 5rem 3rem;
     text-align: center;
-
     text-shadow: 0.2px 0.2px 1px #464646;
+    
+    margin: 2rem 5rem 3rem;
 }
 
 section.main-features {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+}
+
+section.features {
+    font-size: 13pt;
+    height: auto;
 }
 
 section.main-features.right {
     flex-direction: row-reverse;
 }
 
-
 img.features {
-    margin-bottom: 5rem;
+    transform: translate(5%, -20%);
 }
 
-section.features {
-    padding: 1%;
-    font-size: 13pt;
+section.features:hover {
+    transform: translateY(-5%);
 }
-
 
 section.features.right {
     text-align: right;
-    margin: 2rem 0 2rem 7rem;
+    margin: 2rem 0 2rem 15rem;
     
     border-color: var(--primary-background-colour);
     background-color: var(--primary-background-colour);
-    box-shadow: 0px 2px 4px 4px #ecececb4;
+    box-shadow: 0px 1px 4px 2px #d1d1d1b4;
 }
 
 
 section.features.left {
     text-align: left;
-    margin-right: 7rem;
+    margin-right: 15rem;
     
     border-color: var(--secondary-background-colour);
     background-color: var(--secondary-background-colour);
-    box-shadow: 0cm 2px 4px 4px #eaeaeab4;
+    box-shadow: 0cm 1px 4px 2px #c7c7c7a8;
 }
+
+section.reviews {
+    height: 32vh;
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 0;
+
+    box-shadow: 1px 1px 5px 1px var(--secondary-background-colour);
+    background-color: var(--secondary-background-colour);
+}
+
+h3.reviews {
+    margin: 2rem 1rem;
+}
+
+p.reviews {
+    font-size: 15pt;
+    text-align: center;
+    margin: 0 auto;
+    width: 50vw;
+}
+
+section.reviews img {
+    margin: 0 auto;
+}
+
+p.reviews::before {
+    content: "\“This app keeps everything in one place—tasks, updates, and progress tracking. It’s exactly what we needed to stay productive without the chaos.\” — Daniel T";
+    color: var(--font-colour);
+    animation: shuffleReviews infinite 30s;
+}
+
+@keyframes shuffleReviews {
+    0% {
+        content: "\"This app has completely transformed how our team collaborates. The task lists keep us organized, and the progress reports help us stay on track. Highly recommend!\" — Sarah M";
+    }
+    30% {
+        content: "\"I love how intuitive this app is! The project boards make organizing work a breeze, and assigning tasks is effortless. It’s the perfect productivity tool.\” — Jason R";
+    }
+    60% {
+        content: "\"As a fully remote team, this app has been a lifesaver. It keeps everyone aligned, and the dashboard gives great insights into our productivity.\" — Emma L";
+    }
+
+}
+
 
 section.contact {
     margin: 1rem;
@@ -211,6 +283,7 @@ section.contact-links {
     display: flex;
     justify-content: space-evenly;
 }
+
 
 @media screen and (min-width: 22rem) and (max-width: 37rem) {
     header nav {
@@ -303,11 +376,15 @@ section.contact-links {
 
     p.description {
         font-size: 10pt;
-        margin-bottom: 2rem;
     }
     
     img.features {
-        width: 15rem;
+        margin: 4rem auto 1rem;
+        width: 12rem;
+    }
+
+    p.reviews {
+        font-size: 10pt;
     }
 }
 
@@ -347,27 +424,31 @@ section.contact-links {
         font-size: 15pt;
         border-style: solid;
         border-radius: 20%;
-        padding: 5% 5%;
+        padding: 3% 5%;
     }
     
     
     section h2 {
-        font-size: 26pt;
+        font-size: 20pt;
     }
     
 
     section.about {
-        font-size: 14pt;
+        font-size: 13pt;
         margin: 2rem auto;
     }
 
+    section.about p {
+        width: 65vw;
+    }
+
     h3 {
-        font-size: 22pt;
+        font-size: 18pt;
     }
 
     p.description {
         margin: 1rem;
-        font-size: 14pt;
+        font-size: 13pt;
     }
     
     img.features {
@@ -384,4 +465,7 @@ section.contact-links {
         margin: 1rem 1rem;
     }
 
+    p.reviews {
+        font-size: 13pt;
+    }
 }

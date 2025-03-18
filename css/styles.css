@@ -175,6 +175,22 @@ section.about p {
     margin: 0 auto;
 }
 
+
+section.feature-list {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    margin: 3rem 3rem;
+
+
+}
+
+.feature {
+    font-size: 13pt;
+    text-align: center;
+    margin: 1rem ;
+}
+
 h3 {
     color: var(--font-colour);
     font-size: 22pt;
@@ -306,19 +322,20 @@ section.contact-links {
 
     h1 {
         font-size: 30pt;
+        margin: 10rem auto;
     }
     
 
     section.opening {
         font-size: 12pt;
-        margin: 3rem auto;      
+        margin: 2rem auto;      
     }
     
     
     section.main.anchors {
         display: flex;
         flex-direction: column;
-        margin: 2rem auto;
+        margin: 2rem auto 0;
         height: 10vh;
     }
     
@@ -338,9 +355,22 @@ section.contact-links {
 
     section.about {
         font-size: 11pt;
-        margin: 1rem auto;
+        margin: 4rem auto;
+    }
+
+    section.feature-list {
+        margin: 0.5rem 1rem;      
     }
     
+    .feature {
+        font-size: 11pt;
+        margin: 0.5rem;
+    }
+    
+    img.feature {
+        width: 6rem;
+    }
+
     
     h3 {
         font-size: 15pt;
